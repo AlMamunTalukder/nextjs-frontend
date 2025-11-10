@@ -27,12 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <>
           <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
@@ -45,6 +47,6 @@ export default function RootLayout({
           </ThemeProvider>
         </>
       </body>
-    </html >
+    </html>
   );
 }
